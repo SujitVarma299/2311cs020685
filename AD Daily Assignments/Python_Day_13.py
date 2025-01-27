@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-file_path = "/content/drive/MyDrive/Day_13_Pharma_data.csv"
+file_path = "C:\Users\Jannuss\Downloads\Day_12_banking_data.csv"
 data = pd.read_csv(file_path)
 # Display the first few rows of the dataset
 print(data.head())

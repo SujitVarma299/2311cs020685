@@ -1,0 +1,25 @@
+import pandas as pd 
+from sklearn.preprocessing import MinMaxScaler
+
+data = {
+    "age": [25, 32, 42, 45, 76],
+    "height": [135, 543, 255, 253, 665],
+    "weight": [40, 34, 23, 45, 24],
+}
+
+df = pd.DataFrame(data)
+print("Original DataFrame: ")
+print(df)
+
+scaler = MinMaxScaler()
+normalized_data = scaler.fit_transform(df)
+normalized_pd = pd.DataFrame(normalized_data, columns=df.columns)
+
+print("\nNormalized DataFrame (scaled to range [0,1]):")
+print(normalized_pd)
+
+print("\nFeature-wise Min values After Scaling:")
+print(normalized_pd.min())
+
+print("\nFeature-wise Max values After Scaling:")
+print(normalized_pd.max())
